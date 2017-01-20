@@ -5,12 +5,17 @@ Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.c
 
 Changelog: [Changelog.txt](CHANGELOG.txt)
 
-[![WCAG Conformance 2.0 AA Badge](https://www.w3.org/WAI/wcag2AA-blue.png)](https://www.w3.org/TR/WCAG20/) Date: 201X-XX-XX  
-This module conforms to level AA WCAG 2.0 standards as required by the university's accessibility policy. For more information on the policy please visit: [https://ucomm.stanford.edu/policies/accessibility-policy.html](https://ucomm.stanford.edu/policies/accessibility-policy.html). 
+Description
+---
 
 The Stanford Layouts module is used to encapsulate page layout. Wether you are
 using blocks, panels, display suite, or custom layout plugins this is the place
 to store your work.
+
+Accessibilty
+---
+[![WCAG Conformance 2.0 AA Badge](https://www.w3.org/WAI/wcag2AA-blue.png)](https://www.w3.org/TR/WCAG20/) Date: 201X-XX-XX  
+This module conforms to level AA WCAG 2.0 standards as required by the university's accessibility policy. For more information on the policy please visit: [https://ucomm.stanford.edu/policies/accessibility-policy.html](https://ucomm.stanford.edu/policies/accessibility-policy.html). 
 
 Installation
 ---

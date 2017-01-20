@@ -1,4 +1,4 @@
-#[Stanford Layouts](https://github.com/SU-SWS/stanford_layouts)
+#[Stanford Module Example](https://github.com/SU-SWS/stanford_module_example)
 ##### Version: 8.x-1.x
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  
@@ -8,15 +8,15 @@ Changelog: [Changelog.txt](CHANGELOG.txt)
 Description
 ---
 
-The Stanford Layouts module is used to encapsulate page layout. Wether you are
-using blocks, panels, display suite, or custom layout plugins this is the place
-to store your work.
+The Stanford Module Example module is used to do some things. Please put a
+description of what this module does so that a new developer can get a quick
+understanding about what this module does.
 
 Accessibilty
 ---
-[![WCAG Conformance 2.0 AA Badge](https://www.w3.org/WAI/wcag2AA-blue.png)](https://www.w3.org/TR/WCAG20/) 
+[![WCAG Conformance 2.0 AA Badge](https://www.w3.org/WAI/wcag2AA-blue.png)](https://www.w3.org/TR/WCAG20/)
 Evaluation Date: 201X-XX-XX  
-This module conforms to level AA WCAG 2.0 standards as required by the university's accessibility policy. For more information on the policy please visit: [https://ucomm.stanford.edu/policies/accessibility-policy.html](https://ucomm.stanford.edu/policies/accessibility-policy.html). 
+This module conforms to level AA WCAG 2.0 standards as required by the university's accessibility policy. For more information on the policy please visit: [https://ucomm.stanford.edu/policies/accessibility-policy.html](https://ucomm.stanford.edu/policies/accessibility-policy.html).
 
 Installation
 ---

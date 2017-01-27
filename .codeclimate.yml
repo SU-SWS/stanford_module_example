@@ -64,6 +64,8 @@ engines:
         enabled: false
       CleanCode/BooleanArgumentFlag:
         enabled: false
+      UnusedFormalParameter:
+        enabled: false
     config:
       # https://phpmd.org/rules/index.html
       # The following sets include everything except the controversial set.

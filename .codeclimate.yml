@@ -19,6 +19,10 @@ engines:
     checks:
       IdSelector:
         enabled: false
+      SelectorFormat:
+        enabled: false
+      NestingDepth:
+        enabled: false
       ColorVariable:
         enabled: false
       PropertySortOrder:

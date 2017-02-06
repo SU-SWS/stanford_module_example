@@ -12,7 +12,7 @@ The Stanford Module Example module is used to do some things. Please put a
 description of what this module does so that a new developer can get a quick
 understanding about what this module does.
 
-Accessibilty
+Accessibility
 ---
 [![WCAG Conformance 2.0 AA Badge](https://www.w3.org/WAI/wcag2AA-blue.png)](https://www.w3.org/TR/WCAG20/)
 Evaluation Date: 201X-XX-XX  

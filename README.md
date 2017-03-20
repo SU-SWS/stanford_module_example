@@ -1,4 +1,4 @@
-#[Stanford Module Example](https://github.com/SU-SWS/stanford_module_example)
+# [Stanford Module Example](https://github.com/SU-SWS/stanford_module_example)
 ##### Version: 8.x-1.x
 
 Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  

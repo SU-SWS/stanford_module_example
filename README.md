@@ -21,7 +21,7 @@ This module conforms to level AA WCAG 2.0 standards as required by the universit
 Installation
 ---
 
-Install this module like any other module. [See Drupal Documentation](https://drupal.org/documentation/install/modules-themes/modules-7)
+Install this module like any other module. [See Drupal Documentation](https://drupal.org/documentation/install/modules-themes/modules-8)
 
 Configuration
 ---

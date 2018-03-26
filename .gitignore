@@ -34,3 +34,6 @@ config.rb
 .CVS
 cgi-bin
 node_modules
+
+# DB Dumbs don't belong in modules.
+*.sql

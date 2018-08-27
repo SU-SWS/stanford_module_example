@@ -1,5 +1,4 @@
-version: "2"
-plugins:
+engines:
   # https://docs.codeclimate.com/docs/eslint
   # ES Linting requires an .eslintrc file to tweak checks.
   eslint:
@@ -126,8 +125,18 @@ plugins:
       - todo
       - dpm
       - dsm
+ratings:
+  paths:
+  - "**.inc"
+  - "**.module"
+  - "**.profile"
+  - "**.php"
+  - "**.install"
+  - "**.scss"
+  - "**.sass"
+  - "**.js"
 # exclude these files/paths
-exclude_patterns:
+exclude_paths:
 - "**.features.**"
 - "**.views_default.inc"
 - "**.field_group.inc"

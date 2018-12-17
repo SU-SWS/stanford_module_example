@@ -1,14 +1,25 @@
 version: "2"
+checks:
+  argument-count:
+    enabled: false
+  method-complexity:
+    config:
+      threshold: 10
+  method-lines:
+    config:
+      threshold: 40
+  method-count:
+    config:
+      threshold: 25
+
 plugins:
   # https://docs.codeclimate.com/docs/eslint
   # ES Linting requires an .eslintrc file to tweak checks.
   eslint:
     enabled: false
+  # We can ignore css since we compile all css from scss files.
   csslint:
-    enabled: true
-    checks:
-      overqualified-elements:
-        enabled: false
+    enabled: false
   # We don't lint our coffee. Eew.
   coffeelint:
     enabled: false
@@ -36,13 +47,13 @@ plugins:
     enabled: true
     checks:
       Drupal Commenting FunctionComment TypeHintMissing:
-        enabled: false
+        enabled: true
       Drupal Commenting FunctionComment IncorrectTypeHint:
-        enabled: false
+        enabled: true
       DrupalPractice Commenting CommentEmptyLine SpacingAfter:
-        enabled: false
+        enabled: true
       Drupal NamingConventions ValidFunctionName ScopeNotCamelCaps:
-        enabled: false
+        enabled: true
       Drupal NamingConventions ValidClassName StartWithCaptial:
         enabled: false
       Drupal NamingConventions ValidFunctionName NotCamelCaps:
@@ -50,7 +61,7 @@ plugins:
       DrupalPractice General ClassName ClassPrefix:
         enabled: false
       Drupal NamingConventions ValidClassName NoUnderscores:
-        enabled: false
+        enabled: true
     config:
       file_extensions: "php,inc,install,module,profile"
       standard: "Drupal,DrupalPractice"
@@ -66,6 +77,8 @@ plugins:
       CleanCode/BooleanArgumentFlag:
         enabled: false
       UnusedFormalParameter:
+        enabled: false
+      Naming/ShortVariable:
         enabled: false
     config:
       # https://phpmd.org/rules/index.html
@@ -100,25 +113,15 @@ plugins:
     enabled: true
     config:
       strings:
-      - FIXME
-      - BUG
-      - TODO
-      - todo
-      - dpm
-      - dsm
+        - FIXME
+        - BUG
+        - TODO
+        - todo
+        - dpm
+        - dsm
 # exclude these files/paths
 exclude_patterns:
-- "**.features.**"
-- "**.views_default.inc"
-- "**.field_group.inc"
-- "**.ds.inc"
-- "**.bean.inc"
-- "**.context.inc"
-- "test/**/*"
-- "**/vendor/**/*"
-- "**.min.*"
-- "tests/"
-- "spec/"
-- "**/vendor/"
-- "**.api.php"
-- "*.twig"
+  - "**.min.*"
+  - "**/tests/**/*"
+  - "tests/"
+  - "spec/"

@@ -43,20 +43,10 @@
 #
 # EXAMPLE:
 #
-# example_name:
-#   version: VERSION
-#   css:
-#     base:
-#       css/print.css: { media: print }
-#     layout:
-#       css/layout.css: {}
-#     component:
-#       css/components.css: {}
-#     state:
-#       css/states.css: {}
-#     theme:
-#       css/theme.css: {}
-#   js:
-#     js/script.js: {}
-#   dependencies:
-#     - core/jquery
+stanford_module_example:
+  version: VERSION
+  css:
+    component:
+      dist/css/stanford_module_example.css: {}
+  js:
+    dist/js/stanford_module_example.js: {}

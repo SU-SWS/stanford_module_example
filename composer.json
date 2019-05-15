@@ -1,6 +1,6 @@
 {
   "name": "su-sws/stanford_module_example",
-  "description": "Stanford Module Example for the layout_plugin",
+  "description": "Stanford Module Example",
   "type": "drupal-custom-module",
   "homepage": "https://github.com/SU-SWS/stanford_module_example",
   "authors": [],

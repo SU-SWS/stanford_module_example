@@ -138,8 +138,8 @@ var webpackConfig = {
                 loader: "file-loader",
                 options: {
                   name: "[name].[ext]",
-                  publicPath: "../assets/img",
-                  outputPath: "../assets/img"
+                  publicPath: "../../lib/assets/img",
+                  // outputPath: "../assets/img"
                 }
               }
             }
@@ -161,8 +161,8 @@ var webpackConfig = {
                 loader: "file-loader",
                 options: {
                   name: "[name].[ext]",
-                  publicPath: "../assets/svg",
-                  outputPath: "../assets/svg"
+                  publicPath: "../../lib/assets/svg",
+                  // outputPath: "../assets/svg"
                 }
               }
             }
@@ -199,18 +199,18 @@ var webpackConfig = {
       onStart: {
         delete: [distDir]
       },
-      onEnd: {
-        copy: [
+      // onEnd: {
+        // copy: [
           // {
           //   source: npmPackage + "/decanter/core/src/templates/**/*.twig",
           //   destination: distDir + "/templates/decanter/"
           // },
-          {
-            source: srcDir + "/assets/**/*",
-            destination: distDir + "/assets/"
-          }
-        ],
-      },
+          // {
+          //   source: srcDir + "/assets/**/*",
+          //   destination: distDir + "/assets/"
+          // }
+        // ],
+      // },
     }),
     // Add a plugin to watch other files other than that required by webpack.
     // https://www.npmjs.com/package/filewatcher-webpack-plugin

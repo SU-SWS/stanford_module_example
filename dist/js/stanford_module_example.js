@@ -81,15 +81,15 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./assets/js/stanford_module_example.js");
+/******/ 	return __webpack_require__(__webpack_require__.s = "./lib/js/stanford_module_example.js");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./assets/js/stanford_module_example.behavior.js":
-/*!*******************************************************!*\
-  !*** ./assets/js/stanford_module_example.behavior.js ***!
-  \*******************************************************/
+/***/ "./lib/js/stanford_module_example.behavior.js":
+/*!****************************************************!*\
+  !*** ./lib/js/stanford_module_example.behavior.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -112,18 +112,18 @@ window.Drupal.behaviors.stanford_module_example = {
 
 /***/ }),
 
-/***/ "./assets/js/stanford_module_example.js":
-/*!**********************************************!*\
-  !*** ./assets/js/stanford_module_example.js ***!
-  \**********************************************/
+/***/ "./lib/js/stanford_module_example.js":
+/*!*******************************************!*\
+  !*** ./lib/js/stanford_module_example.js ***!
+  \*******************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _scss_stanford_module_example_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/stanford_module_example.scss */ "./assets/scss/stanford_module_example.scss");
+/* harmony import */ var _scss_stanford_module_example_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../scss/stanford_module_example.scss */ "./lib/scss/stanford_module_example.scss");
 /* harmony import */ var _scss_stanford_module_example_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_scss_stanford_module_example_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _stanford_module_example_behavior_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stanford_module_example.behavior.js */ "./assets/js/stanford_module_example.behavior.js");
+/* harmony import */ var _stanford_module_example_behavior_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./stanford_module_example.behavior.js */ "./lib/js/stanford_module_example.behavior.js");
 /* harmony import */ var _stanford_module_example_behavior_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_stanford_module_example_behavior_js__WEBPACK_IMPORTED_MODULE_1__);
 // Main Webpack entry file.
 
@@ -131,10 +131,10 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./assets/scss/stanford_module_example.scss":
-/*!**************************************************!*\
-  !*** ./assets/scss/stanford_module_example.scss ***!
-  \**************************************************/
+/***/ "./lib/scss/stanford_module_example.scss":
+/*!***********************************************!*\
+  !*** ./lib/scss/stanford_module_example.scss ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "repository": "https://github.com/SU-SWS/stanford_module_example",
   "config": {
-    "srcSass": "assets/scss",
+    "srcSass": "lib/scss",
     "distSass": "dist/css",
-    "srcJS": "assets/js",
+    "srcJS": "lib/js",
     "distJS": "dist/js",
-    "srcAssets": "assets/media",
-    "distAssets": "dist/media"
+    "srcAssets": "lib/assets",
+    "distAssets": "dist/assets"
   },
   "scripts": {
     "build": "webpack --mode=development",

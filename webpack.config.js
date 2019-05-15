@@ -23,14 +23,12 @@ const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 // /////////////////////////////////////////////////////////////////////////////
 
 const npmPackage = 'node_modules/';
-const srcDir = path.resolve(__dirname, "assets");
+const srcDir = path.resolve(__dirname, "lib");
 const distDir = path.resolve(__dirname, "dist");
 const srcSass = path.resolve(__dirname, process.env.npm_package_config_srcSass);
 const distSass = path.resolve(__dirname, process.env.npm_package_config_distSass);
 const srcJS = path.resolve(__dirname, process.env.npm_package_config_srcJS);
 const distJS = path.resolve(__dirname, process.env.npm_package_config_distJS);
-const srcAssets = path.resolve(__dirname, process.env.npm_package_config_srcAssets);
-const distAssets = path.resolve(__dirname, process.env.npm_package_config_distAssets);
 
 // /////////////////////////////////////////////////////////////////////////////
 // Functions ///////////////////////////////////////////////////////////////////
@@ -49,7 +47,6 @@ var webpackConfig = {
   // What build?
   entry: {
     "stanford_module_example": path.resolve(__dirname, srcJS + "/stanford_module_example.js"),
-    "behaviors": path.resolve(__dirname, srcJS + "/stanford_module_example.behavior.js"),
   },
   // Where put build?
   output: {
@@ -115,8 +112,8 @@ var webpackConfig = {
             options: {
               includePaths: [
                 path.resolve(__dirname, npmPackage, "bourbon/core"),
+                path.resolve(__dirname, npmPackage + "/decanter/core/src/scss"),
                 path.resolve(__dirname, srcSass),
-                path.resolve(__dirname, npmPackage + "/decanter/core/src/scss")
               ],
               sourceMap: true,
               lineNumbers: true,
@@ -197,12 +194,6 @@ var webpackConfig = {
       filename:  "../css/[name].css"
     }),
     // A webpack plugin to manage files before or after the build.
-    // Used here to:
-    // - clean all generated files (js AND css) prior to building
-    // - copy generated files to the styleguide after building
-    // Copying to the styleguide must happen in this build because the 2 configs
-    // run asynchronously, and the kss build finishes before this build generates
-    // the assets that need to be copied.
     // https://www.npmjs.com/package/filemanager-webpack-plugin
     new FileManagerPlugin({
       onStart: {
@@ -210,10 +201,10 @@ var webpackConfig = {
       },
       onEnd: {
         copy: [
-          {
-            source: npmPackage + "/decanter/core/src/templates/**/*.twig",
-            destination: distDir + "/templates/decanter/"
-          },
+          // {
+          //   source: npmPackage + "/decanter/core/src/templates/**/*.twig",
+          //   destination: distDir + "/templates/decanter/"
+          // },
           {
             source: srcDir + "/assets/**/*",
             destination: distDir + "/assets/"

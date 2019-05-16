@@ -1,7 +1,7 @@
 # [Stanford Module Example](https://github.com/SU-SWS/stanford_module_example)
-##### Version: 8.x-1.x
+##### Version: 8.x-2.x
 
-Maintainers: [jbickar](https://github.com/jbickar), [sherakama](https://github.com/sherakama)  
+Maintainers: [Mike Decker](https://github.com/pookmish), [sherakama](https://github.com/sherakama)  
 
 Changelog: [Changelog.txt](CHANGELOG.txt)
 
@@ -41,9 +41,7 @@ If you wish to develop on this module you will most likely need to compile some 
 
 ```
 npm install
-grunt watch
- or
-grunt devmode
+npm run build
 ```
 
 Contribution / Collaboration

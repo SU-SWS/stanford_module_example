@@ -138,8 +138,8 @@ var webpackConfig = {
                 loader: "file-loader",
                 options: {
                   name: "[name].[ext]",
-                  publicPath: "../../lib/assets/img",
-                  // outputPath: "../assets/img"
+                  publicPath: "../../assets/img",
+                  outputPath: "../../assets/img"
                 }
               }
             }
@@ -161,8 +161,8 @@ var webpackConfig = {
                 loader: "file-loader",
                 options: {
                   name: "[name].[ext]",
-                  publicPath: "../../lib/assets/svg",
-                  // outputPath: "../assets/svg"
+                  publicPath: "../../assets/svg",
+                  outputPath: "../../assets/svg"
                 }
               }
             }

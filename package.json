@@ -20,7 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.0.0-beta.55",
     "@babel/preset-env": "^7.0.0-beta.55",
-    "acorn": "^6.1.1",
+    "acorn": "^6.4.1",
     "autoprefixer": "^9.4.10",
     "babel-loader": "^8.0.5",
     "bourbon": "^5.0.0",

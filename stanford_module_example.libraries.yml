@@ -47,6 +47,6 @@ stanford_module_example:
   version: VERSION
   css:
     component:
-      dist/css/stanford_module_example.css: {}
+      dist/css/stanford_module_example.styles.css: {}
   js:
-    dist/js/stanford_module_example.js: {}
+    dist/js/stanford_module_example.script.js: {}

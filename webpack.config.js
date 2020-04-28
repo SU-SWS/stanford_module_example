@@ -7,28 +7,28 @@
 // Requires / Dependencies /////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-const path = require('path');
-const webpack = require('webpack');
-const autoprefixer = require('autoprefixer');
-const FileManagerPlugin = require('filemanager-webpack-plugin');
-const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const WebpackAssetsManifest = require("webpack-assets-manifest");
-const ExtraWatchWebpackPlugin = require("extra-watch-webpack-plugin");
+const path =                      require('path');
+const webpack =                   require('webpack');
+const autoprefixer =              require('autoprefixer');
+const FileManagerPlugin =         require('filemanager-webpack-plugin');
+const UglifyJsPlugin =            require("uglifyjs-webpack-plugin");
+const MiniCssExtractPlugin =      require("mini-css-extract-plugin");
+const OptimizeCSSAssetsPlugin =   require("optimize-css-assets-webpack-plugin");
+const WebpackAssetsManifest =     require("webpack-assets-manifest");
+const ExtraWatchWebpackPlugin =   require("extra-watch-webpack-plugin");
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 
 // /////////////////////////////////////////////////////////////////////////////
 // Paths ///////////////////////////////////////////////////////////////////////
 // /////////////////////////////////////////////////////////////////////////////
 
-const npmPackage = 'node_modules/';
+const npmPackage = path.resolve(__dirname, 'node_modules');
 const srcDir = path.resolve(__dirname, "lib");
 const distDir = path.resolve(__dirname, "dist");
-const srcSass = path.resolve(__dirname, process.env.npm_package_config_srcSass);
-const distSass = path.resolve(__dirname, process.env.npm_package_config_distSass);
-const srcJS = path.resolve(__dirname, process.env.npm_package_config_srcJS);
-const distJS = path.resolve(__dirname, process.env.npm_package_config_distJS);
+const srcSass = path.resolve(srcDir, 'scss');
+const distSass = path.resolve(distDir, 'css');
+const srcJS = path.resolve(srcDir, 'js');
+const distJS = path.resolve(distDir, 'js');
 
 // /////////////////////////////////////////////////////////////////////////////
 // Functions ///////////////////////////////////////////////////////////////////
@@ -46,18 +46,13 @@ var webpackConfig = {
   devtool: 'source-map',
   // What build?
   entry: {
-    "stanford_module_example": path.resolve(__dirname, srcJS + "/stanford_module_example.js"),
+    "stanford_module_example.script": path.resolve(srcJS, "stanford_module_example.js"),
+    "stanford_module_example.styles": path.resolve(srcSass, "stanford_module_example.scss"),
   },
   // Where put build?
   output: {
     filename: "[name].js",
-    path: path.resolve(__dirname, distJS)
-  },
-  // Relative output paths for css assets.
-  resolve: {
-    alias: {
-      'decanter-assets': path.resolve(npmPackage + 'decanter/core/src/img')
-    }
+    path: distJS
   },
   // Additional module rules.
   module: {
@@ -100,7 +95,7 @@ var webpackConfig = {
             options: {
               sourceMap: true,
               plugins: () => [
-                autoprefixer()
+                autoprefixer({ grid: true })
               ]
             }
           },
@@ -109,9 +104,8 @@ var webpackConfig = {
             loader: 'sass-loader',
             options: {
               includePaths: [
-                path.resolve(__dirname, npmPackage, "bourbon/core"),
-                path.resolve(__dirname, npmPackage + "/decanter/core/src/scss"),
-                path.resolve(__dirname, srcSass),
+                npmPackage,
+                srcSass,
               ],
               sourceMap: true,
               lineNumbers: true,
@@ -121,6 +115,16 @@ var webpackConfig = {
           }
         ]
       },
+      // Apply plugin to font assets.
+      {
+        test: /\.(woff2?|ttf|otf|eot)$/,
+        loader: 'file-loader',
+        options: {
+          name: "[name].[ext]",
+          publicPath: "../assets/fonts",
+          outputPath: "../assets/fonts"
+        }
+      },
       // Apply plugins to image assets.
       {
         test: /\.(png|jpg|gif)$/i,
@@ -128,18 +132,11 @@ var webpackConfig = {
           // A loader for webpack which transforms files into base64 URIs.
           // https://github.com/webpack-contrib/url-loader
           {
-            loader: 'url-loader',
+            loader: "file-loader",
             options: {
-              // Maximum size of a file in bytes. 8.192 Kilobtyes.
-              limit: 8192,
-              fallback: {
-                loader: "file-loader",
-                options: {
-                  name: "[name].[ext]",
-                  publicPath: "../../assets/img",
-                  outputPath: "../../assets/img"
-                }
-              }
+              name: "[name].[ext]",
+              publicPath: "../assets/img",
+              outputPath: "../assets/img"
             }
           }
         ]
@@ -148,21 +145,12 @@ var webpackConfig = {
       {
         test: /\.(svg)$/i,
         use: [
-          // A loader for webpack which transforms files into base64 URIs.
-          // https://github.com/webpack-contrib/url-loader
           {
-            loader: 'url-loader',
+            loader: "file-loader",
             options: {
-              // Maximum size of a file in bytes. 8.192 Kilobtyes.
-              limit: 8192,
-              fallback: {
-                loader: "file-loader",
-                options: {
-                  name: "[name].[ext]",
-                  publicPath: "../../assets/svg",
-                  outputPath: "../../assets/svg"
-                }
-              }
+              name: "[name].[ext]",
+              publicPath: "../assets/svg",
+              outputPath: "../assets/svg"
             }
           }
         ]

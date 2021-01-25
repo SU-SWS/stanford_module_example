@@ -13,8 +13,8 @@
       "url": "https://packages.drupal.org/8"
     }
   ],
-  "require": {}
+  "require": {},
   "config": {
      "sort-packages": true
-  },
+  }
 }

@@ -4,8 +4,17 @@
   "type": "drupal-custom-module",
   "homepage": "https://github.com/SU-SWS/stanford_module_example",
   "authors": [],
-  "license": "GPL-2.0+",
+  "license": "GPL-2.0-or-later",
   "minimum-stability": "dev",
   "prefer-stable": true,
-  "require": {}
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    }
+  ],
+  "require": {},
+  "config": {
+     "sort-packages": true
+  }
 }

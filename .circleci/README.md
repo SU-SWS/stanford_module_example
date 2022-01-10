@@ -14,7 +14,7 @@
 1. Save the variable
 1. Go to the “Advanced Settings” in circleci https://circleci.com/gh/SU-SWS/[repo-name]/edit#advanced-settings
 1. Turn on “GitHub Status updates”
-1. Turn on “Auto-cancel redundant builds”
+1. Turn on “Auto-cancel redundant workflow”
 1. Go to the “Status Badges” in circleci https://circleci.com/gh/SU-SWS/\[repo-name]/edit#badges
 1. copy the markdown text and place it into the README.md file of the repo
 1. Copy the .circleci directory from stanford-caravan/config directory and place it at the root of the repository. The repository should contain a .circleci/config.yml file
